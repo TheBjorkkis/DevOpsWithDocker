@@ -1,0 +1,4 @@
+docker run -d -it --name 1_5 ubuntu:16.04
+docker exec 1_5 apt-get update
+docker exec 1_5 apt_get install -y curl
+docker exec -it 1_5 sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
